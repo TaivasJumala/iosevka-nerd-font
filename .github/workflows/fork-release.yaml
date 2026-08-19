@@ -15,7 +15,7 @@ permissions:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE: ghcr.io/${{ github.repository }}
+  # 1. 这里移除了原本大写的 IMAGE 变量
   FONT_NAME: afio
 
 jobs:
@@ -24,6 +24,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+
+      # 2. 新增这一步：将用户名和仓库名转为小写，并写入环境变量 IMAGE 中
+      - name: Set lowercase image name
+        run: |
+          echo "IMAGE=$(echo "ghcr.io/${{ github.repository }}" | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
       - uses: docker/setup-buildx-action@v4
 
@@ -39,7 +44,7 @@ jobs:
       - id: meta
         uses: docker/metadata-action@v6
         with:
-          images: ${{ env.IMAGE }}
+          images: ${{ env.IMAGE }} # 这里会自动读取到刚才转为小写的 IMAGE 变量
           tags: |
             type=raw,value=sha-${{ steps.sha.outputs.short }}
 
@@ -67,38 +72,3 @@ jobs:
             -R "${{ github.repository }}" \
             --prerelease \
             --title "Latest build" \
-            --notes "$(cat <<'NOTES'
-          ## Install latest build
-
-          ### Download
-
-          ```bash
-          curl -fsSLO https://github.com/${{ github.repository }}/releases/download/latest/${FONT_NAME}-latest.zip
-          ```
-
-          ### Install (macOS)
-
-          ```bash
-          curl -fsSLO https://github.com/${{ github.repository }}/releases/download/latest/${FONT_NAME}-latest.zip
-          unzip -o ${FONT_NAME}-latest.zip -d ~/Library/Fonts/
-          ```
-
-          ### Install (Linux)
-
-          ```bash
-          curl -fsSLO https://github.com/${{ github.repository }}/releases/download/latest/${FONT_NAME}-latest.zip
-          mkdir -p ~/.local/share/fonts
-          unzip -o ${FONT_NAME}-latest.zip -d ~/.local/share/fonts/
-          fc-cache -fv
-          ```
-
-          ---
-
-          > This is an automated pre-release from the latest commit on `main`.
-          > For stable versions, see [tagged releases](https://github.com/${{ github.repository }}/releases).
-          NOTES
-          )" 2>/dev/null || \
-          gh release upload latest \
-            "_output/${FONT_NAME}-latest.zip" \
-            -R "${{ github.repository }}" \
-            --clobber
