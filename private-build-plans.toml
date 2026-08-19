@@ -5,105 +5,114 @@ serifs = "sans"
 noCvSs = false
 exportGlyphNames = true
 
-[buildPlans.afio.variants]
-iherits = "ss15"
+  [buildPlans.afio.variants]
+  inherits = "ss15"
 
-[buildPlans.afio.variants.design]
-five = "upright-arched-serifless"
-six = "straight-bar"
-seven = "straight-serifless"
-nine = "straight-bar"
-zero = "tall-slashed"
-capital-d = "standard-serifless"
-capital-g = "toothed-inward-serifed-hookless"
-capital-j = "serifed-both-sides"
-capital-m = "flat-bottom-serifless"
-capital-q = "crossing"
-capital-u = "toothed-serifless"
-capital-w = "straight-flat-top-serifless"
-a = "double-storey-tailed"
-e = "flat-crossbar"
-g = "single-storey-serifless"
-i = "serifed-asymmetric"
-j = "flat-hook-serifed"
-m = "serifless"
-r = "serifed"
-brace = "straight"
-number-sign = "slanted"
-at = "fourfold"
-dollar = "through-cap"
-percent = "rings-continuous-slash"
-question = "smooth"
-pilcrow = "high"
-lig-ltgteq = "slanted"
-lig-single-arrow-bar = "without-notch"
+    [buildPlans.afio.variants.design]
+    six = "straight-bar"
+    seven = "straight-serifless"
+    nine = "straight-bar"
+    zero = "tall-slashed"
+    capital-d = "standard-serifless"
+    capital-g = "toothed-inward-serifed-hookless"
+    capital-j = "serifed-both-sides"
+    capital-m = "flat-bottom-serifless"
+    capital-q = "crossing-baseline"
+    capital-r = "straight-serifless"
+    capital-u = "toothed-serifless"
+    capital-w = "straight-flat-top-serifless"
+    a = "double-storey-serifless"
+    g = "single-storey-flat-hook-earless-rounded"
+    r = "narrow-hook-serifed"
+    t = "bent-hook-short-neck2"
+    capital-lambda = "straight-top-serifed"
+    lower-lambda = "curly-tailed-turn"
+    lower-xi = "flat-top"
+    lower-pi = "diagonal-tailed"
+    asterisk = "penta-low"
+    brace = "straight"
+    number-sign = "slanted"
+    ampersand = "closed"
+    at = "fourfold"
+    dollar = "through-cap"
+    percent = "rings-continuous-slash"
+    question = "smooth"
+    pilcrow = "high"
+    lig-ltgteq = "slanted"
+    lig-double-arrow-bar = "without-notch"
 
-[buildPlans.afio.variants.italic]
-five = "upright-arched-serifless"
-six = "straight-bar"
-seven = "straight-serifless"
-zero = "tall-slashed"
-capital-d = "standard-serifless"
-capital-g = "toothed-inward-serifed-hookless"
-capital-j = "serifed-both-sides"
-capital-m = "flat-bottom-serifless"
-capital-q = "crossing"
-capital-w = "straight-flat-top-serifless"
-a = "double-storey-tailed"
-f = "tailed"
-g = "single-storey-serifless"
-i = "serifed-diagonal-tailed"
-j = "flat-hook-serifed"
-m = "serifless"
-r = "corner-hooked-serifed"
-v = "straight-motion-serifed"
-w = "straight-flat-top-motion-serifed"
-x = "straight-bilateral-motion-serifed"
-y = "straight-turn-motion-serifed"
-z = "straight-serifless"
-brace = "straight"
-number-sign = "slanted"
-at = "fourfold"
-dollar = "through-cap"
-percent = "rings-continuous-slash"
-question = "smooth"
-pilcrow = "high"
-lig-ltgteq = "slanted"
-
-[buildPlans.afio.weights.light]
-shape = 200
-menu  = 300
-css   = 300
-
-[buildPlans.afio.widths.Extended]
-shape = 600
-menu = 7
-css = "expanded"
+    [buildPlans.afio.variants.italic]
+    six = "straight-bar"
+    seven = "straight-serifless"
+    nine = "straight-bar"
+    zero = "tall-slashed"
+    capital-d = "standard-serifless"
+    capital-g = "toothed-inward-serifed-hookless"
+    capital-j = "serifed"
+    capital-m = "flat-bottom-serifless"
+    capital-q = "crossing"
+    capital-r = "straight-top-left-and-bottom-right-serifed"
+    capital-u = "toothed-serifless"
+    capital-w = "straight-flat-top-motion-serifed"
+    capital-x = "straight-serifless"
+    capital-z = "straight-serifless"
+    a = "double-storey-serifed"
+    f = "tailed"
+    g = "double-storey-open"
+    i = "tailed-serifed"
+    j = "serifed"
+    l = "serifed-flat-tailed"
+    m = "top-left-and-bottom-right-serifed"
+    n = "straight-motion-serifed"
+    p = "eared-motion-serifed"
+    q = "top-cut-tailed-serifless"
+    r = "narrow-hook-serifed"
+    t = "bent-hook-short-neck2"
+    v = "straight-motion-serifed"
+    w = "straight-flat-top-motion-serifed"
+    x = "straight-unilateral-motion-serifed"
+    y = "straight-motion-serifed"
+    z = "straight-serifless"
+    capital-lambda = "straight-top-serifed"
+    lower-lambda = "curly-tailed-turn"
+    lower-xi = "flat-top"
+    lower-pi = "diagonal-tailed"
+    asterisk = "penta-low"
+    brace = "straight"
+    number-sign = "slanted"
+    ampersand = "closed"
+    at = "fourfold"
+    dollar = "through-cap"
+    percent = "rings-continuous-slash"
+    question = "smooth"
+    pilcrow = "high"
+    lig-ltgteq = "slanted"
+    lig-double-arrow-bar = "without-notch"
 
 [buildPlans.afio.widths.Condensed]
-shape = 416
+shape = 456
 menu = 3
 css = "condensed"
 
+[buildPlans.afio.widths.Normal]
+shape = 600
+menu = 5
+css = "normal"
+
 [buildPlans.afio.widths.SemiCondensed]
-shape = 456
+shape = 548
 menu = 4
 css = "semi-condensed"
 
 [buildPlans.afio.widths.SemiExtended]
-shape = 548
+shape = 658
 menu = 6
 css = "semi-expanded"
 
-[buildPlans.afio.widths.ExtraExtended]
-shape = 658
-menu = 8
-css = "extra-expanded"
-
-[buildPlans.afio.widths.UltraExtended]
+[buildPlans.afio.widths.Extended]
 shape = 720
-menu = 9
-css = "ultra-expanded"
+menu = 7
+css = "expanded"
 
 [buildPlans.afio.slopes.Upright]
 angle = 0
@@ -116,13 +125,3 @@ angle = 9.4
 shape = "italic"
 menu = "italic"
 css = "italic"
-
-[buildPlans.afio.slants]
-upright = "normal"
-italic = "italic"
-# oblique = "oblique"
-
-[buildPlans.afio.widths.normal]
-shape = 500        # Width grade of glyph shapes. NOT actual character width.
-menu  = 5          # Width grade for the font's names. NOT actual character width.
-css   = "normal"   # "font-stretch' property of webfont CSS.
