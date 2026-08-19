@@ -129,7 +129,7 @@ css = 700
 
 [buildPlans.afio.slants]
 upright = "normal"
-italic = "italic"
+# italic = "italic"
 # oblique = "oblique"
 
 # End slant section
