@@ -2,13 +2,14 @@
 family = "afio"
 spacing = "term"
 serifs = "sans"
-noCvSs = true
-exportGlyphNames = false
+noCvSs = false
+exportGlyphNames = true
 
 [buildPlans.afio.variants]
 inherits = "ss15"
 
 [buildPlans.afio.variants.design]
+five = "upright-arched-serifless"
 six = "straight-bar"
 seven = "straight-serifless"
 nine = "straight-bar"
@@ -25,7 +26,7 @@ g = "single-storey-serifless"
 m = "serifless"
 r = "serifed"
 t = "flat-hook-short-neck"
-lower-pi = "diagonal-tailed"
+# lower-pi = "diagonal-tailed"
 brace = "straight"
 number-sign = "slanted"
 at = "fourfold-tall"
@@ -63,7 +64,7 @@ w = "straight-flat-top-motion-serifed"
 x = "straight-unilateral-motion-serifed"
 y = "straight-turn-motion-serifed"
 z = "straight-bottom-serifed"
-lower-pi = "diagonal-tailed"
+# lower-pi = "diagonal-tailed"
 brace = "straight"
 number-sign = "slanted"
 at = "fourfold-tall"
@@ -127,9 +128,9 @@ css = 700
 # Format: <upright|italic|oblique> = <"normal"|"italic"|"oblique">
 # When this section is absent, all slants would be built.
 
-# [buildPlans.afio.slants]
-# upright = "normal"
-# italic = "italic"
+[buildPlans.afio.slants]
+upright = "normal"
+italic = "italic"
 # oblique = "oblique"
 
 # End slant section
