@@ -79,6 +79,18 @@ shape = "upright"
 menu = "upright"
 css = "normal"
 
+[buildPlans.afio.slopes.Italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
+
+# [buildPlans.afio.slopes.oblique]
+# angle = 9.4
+# shape = "oblique"
+# menu = "oblique"
+# css = "oblique"
+
 ###################################################################################################
 # Override default building weights
 # When buildPlans.<plan name>.weights is absent, all weights would built and mapped to
@@ -153,15 +165,3 @@ css = "normal"  # "font-stretch' property of webfont CSS.
 
 # End metric override section
 ###################################################################################################
-
-[buildPlans.IosevkaCustom.slopes.Italic]
-angle = 9.4
-shape = "italic"
-menu = "italic"
-css = "italic"
-
-# [buildPlans.afio.slopes.oblique]
-# angle = 9.4
-# shape = "oblique"
-# menu = "oblique"
-# css = "oblique"
