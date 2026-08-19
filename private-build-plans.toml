@@ -2,117 +2,76 @@
 family = "afio"
 spacing = "term"
 serifs = "sans"
-noCvSs = false
-exportGlyphNames = true
+noCvSs = true
+exportGlyphNames = false
 
-  [buildPlans.afio.variants]
-  inherits = "ss15"
+[buildPlans.afio.variants]
+inherits = "ss15"
 
-    [buildPlans.afio.variants.design]
-    six = "straight-bar"
-    seven = "straight-serifless"
-    nine = "straight-bar"
-    zero = "tall-slashed"
-    capital-d = "standard-serifless"
-    capital-g = "toothed-inward-serifed-hookless"
-    capital-j = "serifed-both-sides"
-    capital-m = "flat-bottom-serifless"
-    capital-q = "crossing-baseline"
-    capital-r = "straight-serifless"
-    capital-u = "toothed-serifless"
-    capital-w = "straight-flat-top-serifless"
-    a = "double-storey-serifless"
-    g = "single-storey-flat-hook-earless-rounded"
-    r = "narrow-hook-serifed"
-    t = "bent-hook-short-neck2"
-    capital-lambda = "straight-top-serifed"
-    lower-lambda = "curly-tailed-turn"
-    lower-xi = "flat-top"
-    lower-pi = "diagonal-tailed"
-    asterisk = "penta-low"
-    brace = "straight"
-    number-sign = "slanted"
-    ampersand = "closed"
-    at = "fourfold"
-    dollar = "through-cap"
-    percent = "rings-continuous-slash"
-    question = "smooth"
-    pilcrow = "high"
-    lig-ltgteq = "slanted"
-    lig-double-arrow-bar = "without-notch"
+[buildPlans.afio.variants.design]
+six = "straight-bar"
+seven = "straight-serifless"
+nine = "straight-bar"
+zero = "tall-slashed"
+capital-d = "standard-serifless"
+capital-g = "toothed-inward-serifed-hookless"
+capital-j = "serifed-symmetric"
+capital-m = "flat-bottom-serifless"
+capital-q = "crossing"
+capital-u = "toothed-serifless"
+capital-w = "straight-flat-top-serifless"
+a = "double-storey-serifed"
+g = "single-storey-serifless"
+m = "serifless"
+r = "serifed"
+t = "flat-hook-short-neck"
+lower-pi = "diagonal-tailed"
+brace = "straight"
+number-sign = "slanted"
+at = "fourfold-tall"
+dollar = "through-cap"
+percent = "rings-continuous-slash"
+question = "smooth"
+pilcrow = "high"
+lig-ltgteq = "slanted"
 
-    [buildPlans.afio.variants.italic]
-    six = "straight-bar"
-    seven = "straight-serifless"
-    nine = "straight-bar"
-    zero = "tall-slashed"
-    capital-d = "standard-serifless"
-    capital-g = "toothed-inward-serifed-hookless"
-    capital-j = "serifed"
-    capital-m = "flat-bottom-serifless"
-    capital-q = "crossing"
-    capital-r = "straight-top-left-and-bottom-right-serifed"
-    capital-u = "toothed-serifless"
-    capital-w = "straight-flat-top-motion-serifed"
-    capital-x = "straight-serifless"
-    capital-z = "straight-serifless"
-    a = "double-storey-serifed"
-    f = "tailed"
-    g = "double-storey-open"
-    i = "tailed-serifed"
-    j = "serifed"
-    l = "serifed-flat-tailed"
-    m = "top-left-and-bottom-right-serifed"
-    n = "straight-motion-serifed"
-    p = "eared-motion-serifed"
-    q = "top-cut-tailed-serifless"
-    r = "narrow-hook-serifed"
-    t = "bent-hook-short-neck2"
-    v = "straight-motion-serifed"
-    w = "straight-flat-top-motion-serifed"
-    x = "straight-unilateral-motion-serifed"
-    y = "straight-motion-serifed"
-    z = "straight-serifless"
-    capital-lambda = "straight-top-serifed"
-    lower-lambda = "curly-tailed-turn"
-    lower-xi = "flat-top"
-    lower-pi = "diagonal-tailed"
-    asterisk = "penta-low"
-    brace = "straight"
-    number-sign = "slanted"
-    ampersand = "closed"
-    at = "fourfold"
-    dollar = "through-cap"
-    percent = "rings-continuous-slash"
-    question = "smooth"
-    pilcrow = "high"
-    lig-ltgteq = "slanted"
-    lig-double-arrow-bar = "without-notch"
-
-[buildPlans.afio.widths.Condensed]
-shape = 456
-menu = 3
-css = "condensed"
-
-[buildPlans.afio.widths.Normal]
-shape = 600
-menu = 5
-css = "normal"
-
-[buildPlans.afio.widths.SemiCondensed]
-shape = 548
-menu = 4
-css = "semi-condensed"
-
-[buildPlans.afio.widths.SemiExtended]
-shape = 658
-menu = 6
-css = "semi-expanded"
-
-[buildPlans.afio.widths.Extended]
-shape = 720
-menu = 7
-css = "expanded"
+[buildPlans.afio.variants.italic]
+six = "straight-bar"
+seven = "straight-serifless"
+nine = "straight-bar"
+zero = "tall-slashed"
+capital-d = "standard-serifless"
+capital-g = "toothed-inward-serifed-hookless"
+capital-j = "serifed-symmetric"
+capital-m = "flat-bottom-serifless"
+capital-q = "crossing"
+capital-u = "toothed-serifless"
+capital-w = "straight-flat-top-serifless"
+a = "double-storey-serifed"
+f = "flat-hook-tailed"
+g = "single-storey-serifless"
+i = "tailed-serifed"
+j = "flat-hook-serifed"
+l = "serifed-asymmetric"
+m = "top-left-serifed"
+n = "straight-top-left-serifed"
+r = "serifed"
+t = "flat-hook-short-neck"
+u = "toothed-motion-serifed"
+v = "straight-motion-serifed"
+w = "straight-flat-top-motion-serifed"
+x = "straight-unilateral-motion-serifed"
+y = "straight-turn-motion-serifed"
+z = "straight-bottom-serifed"
+lower-pi = "diagonal-tailed"
+brace = "straight"
+number-sign = "slanted"
+at = "fourfold-tall"
+dollar = "through-cap"
+percent = "rings-continuous-slash"
+question = "smooth"
+pilcrow = "high"
+lig-ltgteq = "slanted"
 
 [buildPlans.afio.slopes.Upright]
 angle = 0
@@ -120,8 +79,89 @@ shape = "upright"
 menu = "upright"
 css = "normal"
 
-[buildPlans.afio.slopes.Italic]
+###################################################################################################
+# Override default building weights
+# When buildPlans.<plan name>.weights is absent, all weights would built and mapped to
+# default values.
+# IMPORTANT : Currently "menu" and "css" property only support numbers between 0 and 1000.
+#             and "shape" properly only supports number between 100 and 900 (inclusive).
+#             If you decide to use custom weights you have to define all the weights you
+#             plan to use otherwise they will not be built.
+[buildPlans.afio.weights.light]
+shape = 200
+menu = 300
+css = 300
+
+[buildPlans.afio.weights.regular]
+shape = 300
+menu = 400
+css = 400
+
+[buildPlans.afio.weights.medium]
+shape = 400
+menu = 500
+css = 500
+
+[buildPlans.afio.weights.bold]
+shape = 500
+menu = 700
+css = 700
+
+# End weight section
+###################################################################################################
+
+###################################################################################################
+# Override default building slant sets
+# Format: <upright|italic|oblique> = <"normal"|"italic"|"oblique">
+# When this section is absent, all slants would be built.
+
+[buildPlans.afio.slants]
+upright = "normal"
+italic = "italic"
+# oblique = "oblique"
+
+# End slant section
+###################################################################################################
+
+###################################################################################################
+# Override default building widths
+# When buildPlans.<plan name>.widths is absent, all widths would built and mapped to
+# default values.
+# IMPORTANT : Currently "shape" property only supports integers between 3 and 9 (inclusive), while
+#             "menu" only supports integers between 1 and 9 (inclusive).
+#             If you decide to use custom widths you have to define all the widths you
+#             plan to use otherwise they will not be built.
+
+[buildPlans.afio.widths.normal]
+shape = 540  # Width grade of glyph shapes. NOT actual character width.
+menu = 5  # Width grade for the font's names. NOT actual character width.
+css = "normal"  # "font-stretch' property of webfont CSS.
+
+###################################################################################################
+# Metric overrides
+# Certain metrics like line height (leading) could be overridden in your build plan file.
+# Edit the values to change the metrics. Remove this section when overriding is not needed.
+
+# [buildPlans.afio.metric-override]
+# leading = 1250
+# winMetricAscenderPad = 0
+# winMetricDescenderPad = 0
+# powerlineScaleY = 1
+# powerlineScaleX = 1
+# powerlineShiftY = 0
+# powerlineShiftX = 0
+
+# End metric override section
+###################################################################################################
+
+[buildPlans.IosevkaCustom.slopes.Italic]
 angle = 9.4
 shape = "italic"
 menu = "italic"
 css = "italic"
+
+# [buildPlans.afio.slopes.oblique]
+# angle = 9.4
+# shape = "oblique"
+# menu = "oblique"
+# css = "oblique"
