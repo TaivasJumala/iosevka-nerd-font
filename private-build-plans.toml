@@ -2,21 +2,108 @@
 family = "afio"
 spacing = "term"
 serifs = "sans"
-noCvSs = true
-exportGlyphNames = false
+noCvSs = false
+exportGlyphNames = true
+
+[buildPlans.afio.variants]
+iherits = "ss15"
 
 [buildPlans.afio.variants.design]
-f = "flat-hook-serifless-crossbar-at-x-height"
+five = "upright-arched-serifless"
+six = "straight-bar"
+seven = "straight-serifless"
+nine = "straight-bar"
+zero = "tall-slashed"
+capital-d = "standard-serifless"
+capital-g = "toothed-inward-serifed-hookless"
+capital-j = "serifed-both-sides"
+capital-m = "flat-bottom-serifless"
+capital-q = "crossing"
+capital-u = "toothed-serifless"
+capital-w = "straight-flat-top-serifless"
+a = "double-storey-tailed"
+e = "flat-crossbar"
+g = "single-storey-serifless"
 i = "serifed-asymmetric"
-l = "serifed-semi-tailed"
-m = "short-leg-serifless"
-zero = "dotted"
-nine = "open-contour"
-asterisk = "hex-low"
-percent = "dots"
-tittle = "square"
-at = "fourfold-solid-inner-tall"
-cyrl-em = "hanging-serifless"
+j = "flat-hook-serifed"
+m = "serifless"
+r = "serifed"
+brace = "straight"
+number-sign = "slanted"
+at = "fourfold"
+dollar = "through-cap"
+percent = "rings-continuous-slash"
+question = "smooth"
+pilcrow = "high"
+lig-ltgteq = "slanted"
+lig-single-arrow-bar = "without-notch"
+
+[buildPlans.afio.variants.italic]
+five = "upright-arched-serifless"
+six = "straight-bar"
+seven = "straight-serifless"
+zero = "tall-slashed"
+capital-d = "standard-serifless"
+capital-g = "toothed-inward-serifed-hookless"
+capital-j = "serifed-both-sides"
+capital-m = "flat-bottom-serifless"
+capital-q = "crossing"
+capital-w = "straight-flat-top-serifless"
+a = "double-storey-tailed"
+f = "tailed"
+g = "single-storey-serifless"
+i = "serifed-diagonal-tailed"
+j = "flat-hook-serifed"
+m = "serifless"
+r = "corner-hooked-serifed"
+v = "straight-motion-serifed"
+w = "straight-flat-top-motion-serifed"
+x = "straight-bilateral-motion-serifed"
+y = "straight-turn-motion-serifed"
+z = "straight-serifless"
+brace = "straight"
+number-sign = "slanted"
+at = "fourfold"
+dollar = "through-cap"
+percent = "rings-continuous-slash"
+question = "smooth"
+pilcrow = "high"
+lig-ltgteq = "slanted"
+
+[buildPlans.afio.weights.light]
+shape = 200
+menu  = 300
+css   = 300
+
+[buildPlans.afio.widths.Extended]
+shape = 600
+menu = 7
+css = "expanded"
+
+[buildPlans.afio.widths.Condensed]
+shape = 416
+menu = 3
+css = "condensed"
+
+[buildPlans.afio.widths.SemiCondensed]
+shape = 456
+menu = 4
+css = "semi-condensed"
+
+[buildPlans.afio.widths.SemiExtended]
+shape = 548
+menu = 6
+css = "semi-expanded"
+
+[buildPlans.afio.widths.ExtraExtended]
+shape = 658
+menu = 8
+css = "extra-expanded"
+
+[buildPlans.afio.widths.UltraExtended]
+shape = 720
+menu = 9
+css = "ultra-expanded"
 
 [buildPlans.afio.slopes.Upright]
 angle = 0
@@ -24,83 +111,18 @@ shape = "upright"
 menu = "upright"
 css = "normal"
 
-# [buildPlans.afio.slopes.oblique]
-# angle = 9.4
-# shape = "oblique"
-# menu = "oblique"
-# css = "oblique"
-
-###################################################################################################
-# Override default building weights
-# When buildPlans.<plan name>.weights is absent, all weights would built and mapped to
-# default values.
-# IMPORTANT : Currently "menu" and "css" property only support numbers between 0 and 1000.
-#             and "shape" properly only supports number between 100 and 900 (inclusive).
-#             If you decide to use custom weights you have to define all the weights you
-#             plan to use otherwise they will not be built.
-[buildPlans.afio.weights.light]
-shape = 200
-menu  = 300
-css   = 300
-
-[buildPlans.afio.weights.regular]
-shape = 300
-menu  = 400
-css   = 400
-
-[buildPlans.afio.weights.medium]
-shape = 400
-menu  = 500
-css   = 500
-
-[buildPlans.afio.weights.bold]
-shape = 500
-menu  = 700
-css   = 700
-
-# End weight section
-###################################################################################################
-
-###################################################################################################
-# Override default building slant sets
-# Format: <upright|italic|oblique> = <"normal"|"italic"|"oblique">
-# When this section is absent, all slants would be built.
+[buildPlans.afio.slopes.Italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
 
 [buildPlans.afio.slants]
 upright = "normal"
-# italic = "italic"
+italic = "italic"
 # oblique = "oblique"
 
-# End slant section
-###################################################################################################
-
-###################################################################################################
-# Override default building widths
-# When buildPlans.<plan name>.widths is absent, all widths would built and mapped to
-# default values.
-# IMPORTANT : Currently "shape" property only supports integers between 3 and 9 (inclusive), while
-#             "menu" only supports integers between 1 and 9 (inclusive).
-#             If you decide to use custom widths you have to define all the widths you
-#             plan to use otherwise they will not be built.
-
 [buildPlans.afio.widths.normal]
-shape = 540        # Width grade of glyph shapes. NOT actual character width.
+shape = 500        # Width grade of glyph shapes. NOT actual character width.
 menu  = 5          # Width grade for the font's names. NOT actual character width.
 css   = "normal"   # "font-stretch' property of webfont CSS.
-
-###################################################################################################
-# Metric overrides
-# Certain metrics like line height (leading) could be overridden in your build plan file.
-# Edit the values to change the metrics. Remove this section when overriding is not needed.
-
-# [buildPlans.afio.metric-override]
-# leading = 1250
-# winMetricAscenderPad = 0
-# winMetricDescenderPad = 0
-# powerlineScaleY = 1
-# powerlineScaleX = 1
-# powerlineShiftY = 0
-# powerlineShiftX = 0
-
-# End metric override section
-###################################################################################################
