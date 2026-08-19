@@ -1,4 +1,3 @@
-# test github action
 [buildPlans.afio]
 family = "afio"
 spacing = "term"
